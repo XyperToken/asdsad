@@ -3,20 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RoyalPAW - $RYPW Token</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <title>RoyalPAW - $RYPW</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   <style>
     body {
+      margin: 0;
       background: url("assets/bg.png") no-repeat center center fixed;
       background-size: cover;
-      font-family: 'Segoe UI', sans-serif;
       color: #fff;
+      font-family: 'Segoe UI', sans-serif;
     }
     nav.container-fluid ul li a {
       color: white;
       font-weight: bold;
     }
-    .container, .container section {
+    main.container {
+      margin-top: 6rem;
+    }
+    section.container {
       background: rgba(0, 0, 0, 0.6);
       padding: 2rem;
       border-radius: 12px;
@@ -28,7 +32,7 @@
     }
     p, li {
       color: white;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
     .buy-btn {
       display: inline-block;
@@ -38,7 +42,8 @@
       font-size: 1.4rem;
       padding: 1rem 2rem;
       border-radius: 10px;
-      margin: 1rem 0;
+      text-align: center;
+      margin: 1rem auto;
     }
     .nft-grid {
       display: flex;
@@ -49,18 +54,19 @@
     .nft-grid img {
       width: 100px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    .featured img {
+      width: 200px;
+      margin-bottom: 1rem;
+    }
+    audio {
+      width: 100%;
+      margin-top: 1rem;
     }
     iframe {
       width: 100%;
-      height: 700px;
+      height: 500px;
       border: none;
-    }
-    .roadmap-image {
-      width: 95%;
-      max-width: 1200px;
-      display: block;
-      margin: 0 auto;
     }
     .social-icons {
       display: flex;
@@ -69,26 +75,22 @@
       flex-wrap: wrap;
     }
     .social-icons img {
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
+      width: 36px;
+      height: 36px;
     }
-    .media-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
     }
-    .media-grid img {
-      width: 150px;
-      height: auto;
+    .gallery img {
+      width: 100%;
       border-radius: 10px;
-      transition: transform 0.3s;
       cursor: pointer;
+      transition: transform 0.2s ease;
     }
-    .media-grid img:hover {
-      transform: scale(1.5);
-      z-index: 2;
+    .gallery img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -98,22 +100,34 @@
     <ul></ul>
     <ul>
       <li><a href="#buy">Buy</a></li>
+      <li><a href="#how">How to Buy</a></li>
       <li><a href="#tokenomics">Tokenomics</a></li>
       <li><a href="#roadmap">RoyalMap</a></li>
       <li><a href="#nfts">NFTs</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#socials">Socials</a></li>
     </ul>
   </nav>
 
   <main class="container" id="buy">
-    <p style="font-size: 1.6rem; font-weight: bold;">Powering paws, NFTs and community impact.</p>
-    <a class="buy-btn" style="margin-left: 0" href="https://pump.fun/board" target="_blank">BUY $RYPW</a>
-    <p><strong>Contract Address:</strong> So11111111111111111111111111111111111111112</p>
+    <div style="text-align: center">
+      <h2><strong>$RYPW Utility Token</strong></h2>
+      <p style="font-size: 1.3rem;">Powering paws, NFTs and community impact.</p>
+      <a class="buy-btn" href="https://pump.fun/board" target="_blank">BUY $RYPW</a>
+      <p><strong>Contract Address:</strong> So11111111111111111111111111111111111111112</p>
+    </div>
   </main>
+
+  <section class="container" id="how">
+    <h2>How to Buy</h2>
+    <p>1. Go to <a href="https://pump.fun" target="_blank">Pump.fun</a> and connect your Solana wallet (Phantom, Solflare, etc.)</p>
+    <p>2. Search for <strong>$RYPW</strong> or paste the contract address.</p>
+    <p>3. Click “Buy” and approve transaction.</p>
+  </section>
 
   <section class="container" id="tokenomics">
     <h2>Tokenomics</h2>
-    <p><img src="assets/token-icon.png" alt="Token Icon" style="width: 40px; vertical-align: middle;" /> Total Supply: 1,000,000,000 $RYPW</p>
+    <p><img src="assets/token-icon.png" alt="Token Icon" style="width: 30px; vertical-align: middle;"> Total Supply: 1,000,000,000 $RYPW</p>
     <ul>
       <li>50M $RYPW – Locked for long-term project stability</li>
       <li>10M $RYPW – Airdropped to RoyalPAW NFT holders</li>
@@ -121,74 +135,86 @@
       <li>30M $RYPW – Donations to dog shelters</li>
       <li>5M $RYPW – Permanently burned</li>
     </ul>
-    <iframe src="https://dexscreener.com/" title="DexScreener"></iframe>
+    <iframe src="https://dexscreener.com" title="DexScreener"></iframe>
   </section>
 
   <section class="container" id="roadmap">
     <h2>RoyalMap</h2>
-    <img class="roadmap-image" src="assets/roadmap.png" alt="Royal Paw Roadmap" />
+    <img src="assets/roadmap.png" alt="RoyalMap" style="width: 95%; border-radius: 10px;" />
   </section>
 
   <section class="container" id="story">
-    <h2>Story of $RYPW</h2>
-    <audio controls autoplay>
-      <source src="assets/bailey-story.mp3" type="audio/mp3" />
+    <h2>The Story of Bailey</h2>
+    <audio autoplay controls>
+      <source src="assets/bailey-story.mp3" type="audio/mp3">
       Your browser does not support the audio element.
     </audio>
   </section>
 
   <section class="container" id="nfts">
     <h2>Bailey’s NFT Collection</h2>
-    <div style="text-align: center;">
-      <img src="assets/nft1.png" alt="Featured NFT" style="width: 250px;" />
+    <div class="featured">
+      <img src="assets/nft1.png" alt="Featured NFT">
     </div>
+    <p>
+      Bailey's NFT drop includes:<br>
+      • 50 Premium NFTs – each comes with 100,000 $RYPW<br>
+      • 100 Standard NFTs – each comes with 50,000 $RYPW<br>
+      These NFTs are rare and never minted again!
+    </p>
     <div class="nft-grid">
-      <img src="assets/nft2.png" alt="NFT2" />
-      <img src="assets/nft3.png" alt="NFT3" />
-      <img src="assets/nft4.png" alt="NFT4" />
-      <img src="assets/nft5.png" alt="NFT5" />
-      <img src="assets/nft6.png" alt="NFT6" />
-      <img src="assets/nft7.png" alt="NFT7" />
+      <img src="assets/nft2.png" alt="NFT 2" />
+      <img src="assets/nft3.png" alt="NFT 3" />
+      <img src="assets/nft4.png" alt="NFT 4" />
+      <img src="assets/nft5.png" alt="NFT 5" />
+      <img src="assets/nft6.png" alt="NFT 6" />
+      <img src="assets/nft7.png" alt="NFT 7" />
     </div>
-    <div style="text-align:center; margin-top: 1rem">
+    <div style="text-align: center; margin-top: 1rem;">
       <a class="buy-btn" href="https://opensea.io/" target="_blank">View Full Collection</a>
     </div>
   </section>
 
-  <section class="container" id="media">
-    <h2>Bailey’s Meme Gallery</h2>
-    <div class="media-grid">
-      <img src="assets/1.jpg" alt="Meme1" />
-      <img src="assets/2.jpg" alt="Meme2" />
-      <img src="assets/3.jpg" alt="Meme3" />
-      <img src="assets/4.jpg" alt="Meme4" />
-      <img src="assets/5.jpg" alt="Meme5" />
-      <img src="assets/6.jpg" alt="Meme6" />
-      <img src="assets/7.jpg" alt="Meme7" />
-      <img src="assets/8.jpg" alt="Meme8" />
-      <img src="assets/9.jpg" alt="Meme9" />
-      <img src="assets/10.jpg" alt="Meme10" />
+  <section class="container" id="about">
+    <h2>About RoyalPAW</h2>
+    <p>
+      RoyalPAW is more than a meme — it’s a mission. Built on Solana, $RYPW supports dogs around the world through shelter donations, NFT innovation, and community-driven action. 
+    </p>
+  </section>
+
+  <section class="container" id="memes">
+    <h2>Bailey's Meme Gallery</h2>
+    <div class="gallery">
+      <img src="assets/1.png" alt="Meme 1">
+      <img src="assets/2.png" alt="Meme 2">
+      <img src="assets/3.png" alt="Meme 3">
+      <img src="assets/4.png" alt="Meme 4">
+      <img src="assets/5.png" alt="Meme 5">
+      <img src="assets/6.png" alt="Meme 6">
+      <img src="assets/7.png" alt="Meme 7">
+      <img src="assets/8.png" alt="Meme 8">
+      <img src="assets/9.png" alt="Meme 9">
+      <img src="assets/10.png" alt="Meme 10">
     </div>
   </section>
 
   <section class="container" id="socials">
     <h2>Socials & Listings</h2>
     <div class="social-icons">
-      <a href="https://coinmarketcap.com/" target="_blank"><img src="assets/cmc.png" alt="CMC" /></a>
-      <a href="https://coingecko.com/" target="_blank"><img src="assets/coingecko.png" alt="Gecko" /></a>
-      <a href="https://dexscreener.com/" target="_blank"><img src="assets/dexscreener.png" alt="Dex" /></a>
-      <a href="https://opensea.io/" target="_blank"><img src="assets/9255431_opensea_icon.png" alt="OpenSea" /></a>
-      <a href="https://pump.fun/board" target="_blank"><img src="assets/pumpfun.png" alt="Pump" /></a>
-      <a href="https://x.com/RoyalPawTOKEN" target="_blank"><img src="assets/twitter.png" alt="Twitter" /></a>
-      <a href="https://t.me" target="_blank"><img src="assets/telegram.png" alt="Telegram" /></a>
-      <a href="https://instagram.com" target="_blank"><img src="assets/instagram.png" alt="Instagram" /></a>
+      <a href="https://coinmarketcap.com/" target="_blank"><img src="assets/cmc.png" alt="CMC"></a>
+      <a href="https://coingecko.com/" target="_blank"><img src="assets/coingecko.png" alt="Gecko"></a>
+      <a href="https://dexscreener.com/" target="_blank"><img src="assets/dexscreener.png" alt="Dex"></a>
+      <a href="https://opensea.io/" target="_blank"><img src="assets/opensea.png" alt="OpenSea"></a>
+      <a href="https://pump.fun/board" target="_blank"><img src="assets/pumpfun.png" alt="Pump"></a>
+      <a href="https://x.com/RoyalPawTOKEN" target="_blank"><img src="assets/twitter.png" alt="Twitter"></a>
+      <a href="https://t.me" target="_blank"><img src="assets/telegram.png" alt="Telegram"></a>
+      <a href="https://instagram.com" target="_blank"><img src="assets/instagram.png" alt="Insta"></a>
     </div>
   </section>
 
   <footer class="container">
     <small><a href="#">RoyalPAW © 2025</a> • <a href="#buy">Back to Top</a></small>
   </footer>
-</body>
-</html>
 
+</body>
 </html>
