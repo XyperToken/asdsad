@@ -1,114 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>RoyalPAW - $RYPW Token</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   <style>
     body {
       background: url("assets/bg.png") no-repeat center center fixed;
       background-size: cover;
-      color: white;
+      color: #fff;
       font-family: 'Segoe UI', sans-serif;
-      scroll-behavior: smooth;
     }
-
     nav.container-fluid ul li a {
       color: white;
       font-weight: bold;
     }
-
-    h1, h2, h3, h4, p, li {
-      color: white;
+    .container, .container section {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem auto;
+      max-width: 900px;
     }
-
+    h1, h2, h3, h4 {
+      color: #ffffff;
+      font-size: 2rem;
+    }
+    p, li {
+      color: white;
+      font-size: 1.2rem;
+    }
     .buy-section {
       text-align: center;
-      margin-top: 2rem;
-      padding: 2rem;
+      margin-top: 8rem;
     }
-
     .buy-btn {
       display: inline-block;
       background: linear-gradient(to right, #ffa500, #ff3c3c);
       color: white;
       font-weight: bold;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       padding: 1rem 2rem;
       border-radius: 10px;
-      margin: 1rem auto;
-      text-decoration: none;
+      margin-bottom: 1rem;
     }
-
     .contract-line {
-      font-size: 1rem;
+      font-size: 1.1rem;
       margin-top: 0.5rem;
     }
-
-    main.container, section.container {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 2rem;
-      border-radius: 12px;
-      margin: 2rem auto;
-      max-width: 800px;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-
-    .staggered {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .staggered section:nth-child(odd) {
-      align-self: flex-start;
-    }
-
-    .staggered section:nth-child(even) {
-      align-self: flex-end;
-    }
-
     .nft-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
     }
-
-    .nft-grid img, .featured img {
+    .nft-grid img {
+      width: 100px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
-
-    .featured img {
-      width: 320px;
-    }
-
-    .nft-grid img {
-      width: 100px;
-    }
-
-    .roadmap-image {
-      max-width: 100%;
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
-      margin-top: 1rem;
-    }
-
     audio {
       width: 100%;
       margin-top: 1rem;
     }
-
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+    .featured {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .roadmap-image {
+      width: 100%;
+      max-width: 2048px;
+      display: block;
+      margin: 0 auto;
+    }
     .social-icons {
       display: flex;
       justify-content: center;
@@ -116,96 +86,101 @@
       flex-wrap: wrap;
       margin-top: 1rem;
     }
-
     .social-icons img {
       width: 36px;
-      height: 36px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
+
   <nav class="container-fluid">
     <ul></ul>
     <ul>
       <li><a href="#buy">Buy</a></li>
       <li><a href="#tokenomics">Tokenomics</a></li>
-      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#roadmap">RoyalMap</a></li>
       <li><a href="#nfts">NFTs</a></li>
       <li><a href="#socials">Socials</a></li>
     </ul>
   </nav>
 
+  <!-- BUY SECTION -->
   <div class="buy-section" id="buy">
     <a class="buy-btn" href="https://pump.fun/board" target="_blank">BUY $RYPW</a>
     <p class="contract-line">Contract Address: So11111111111111111111111111111111111111112</p>
   </div>
 
-  <div class="staggered">
-    <section class="container" id="tokenomics">
-      <h2>Tokenomics</h2>
-      <p><img src="assets/token-icon.png" style="width: 40px; vertical-align: middle;"> 1,000,000,000 Total Supply</p>
-      <ul>
-        <li>50M $RYPW – Locked for long-term project stability</li>
-        <li>10M $RYPW – Airdropped to RoyalPAW NFT holders</li>
-        <li>5M $RYPW – Distributed to dog owners sharing selfies</li>
-        <li>30M $RYPW – Donations to dog shelters</li>
-        <li>5M $RYPW – Permanently burned</li>
-      </ul>
-      <iframe src="https://dexscreener.com" title="DexScreener"></iframe>
-    </section>
+  <!-- TOKENOMICS -->
+  <section class="container" id="tokenomics">
+    <h2>Tokenomics</h2>
+    <p><img src="assets/token-icon.png" alt="Token Icon" style="width: 40px; vertical-align: middle;"> 1,000,000,000 Total Supply</p>
+    <ul>
+      <li>50M $RYPW – Locked for long-term project stability</li>
+      <li>10M $RYPW – Airdropped to RoyalPAW NFT holders</li>
+      <li>5M $RYPW – Distributed to dog owners sharing selfies</li>
+      <li>30M $RYPW – Donations to dog shelters</li>
+      <li>5M $RYPW – Permanently burned</li>
+    </ul>
+    <iframe src="https://dexscreener.com/" title="DexScreener"></iframe>
+  </section>
 
-    <section class="container" id="roadmap">
-      <h2>Roadmap</h2>
-      <img class="roadmap-image" src="assets/roadmap.png" alt="Royal Paw Roadmap">
-    </section>
+  <!-- ROADMAP -->
+  <section class="container" id="roadmap">
+    <img class="roadmap-image" src="assets/roadmap.png" alt="Royal Paw Roadmap">
+  </section>
 
-    <section class="container" id="story">
-      <h2>Story of $RYPW</h2>
-      <audio controls>
-        <source src="assets/bailey-story.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio>
-    </section>
+  <!-- STORY -->
+  <section class="container" id="story">
+    <h2>Story of $RYPW</h2>
+    <audio controls>
+      <source src="assets/bailey-story.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
 
-    <section class="container" id="nfts">
-      <h2>Bailey’s NFT Collection</h2>
-      <p>Bailey has prepared a collection of 150 unique NFTs with special token bonuses:</p>
-      <ul>
-        <li>50 Premium NFTs – guaranteed 100,000 $RYPW each</li>
-        <li>100 Standard NFTs – guaranteed 50,000 $RYPW each</li>
-      </ul>
-      <div class="featured"><img src="assets/nft1.png" alt="Featured NFT"></div>
-      <div class="nft-grid">
-        <img src="assets/nft2.png"><img src="assets/nft3.png"><img src="assets/nft4.png">
-        <img src="assets/nft5.png"><img src="assets/nft6.png"><img src="assets/nft7.png">
-      </div>
-      <div style="text-align:center; margin-top: 1rem">
-        <a class="buy-btn" href="https://opensea.io/" target="_blank">View Full Collection</a>
-      </div>
-    </section>
+  <!-- NFT SECTION -->
+  <section class="container" id="nfts">
+    <h2>Bailey’s NFT Collection</h2>
+    <p>
+      Bailey has prepared a collection of 150 unique NFTs with special token bonuses.
+      <br>- 50 Premium NFTs – guaranteed 100,000 $RYPW each
+      <br>- 100 Standard NFTs – guaranteed 50,000 $RYPW each
+      <br>These NFTs are limited, rare, and will never be minted again.
+    </p>
+    <div class="featured">
+      <img src="assets/nft1.png" alt="Featured NFT">
+    </div>
+    <div class="nft-grid">
+      <img src="assets/nft2.png" alt="NFT2">
+      <img src="assets/nft3.png" alt="NFT3">
+      <img src="assets/nft4.png" alt="NFT4">
+      <img src="assets/nft5.png" alt="NFT5">
+      <img src="assets/nft6.png" alt="NFT6">
+      <img src="assets/nft7.png" alt="NFT7">
+    </div>
+    <div style="text-align:center; margin-top: 1rem">
+      <a class="buy-btn" href="https://opensea.io/" target="_blank">View Full Collection</a>
+    </div>
+  </section>
 
-    <section class="container" id="socials">
-      <h2>Socials & Listings</h2>
-      <div class="social-icons">
-        <a href="https://coinmarketcap.com/" target="_blank"><img src="assets/cmc.png"></a>
-        <a href="https://coingecko.com/" target="_blank"><img src="assets/coingecko.png"></a>
-        <a href="https://dexscreener.com/" target="_blank"><img src="assets/dexscreener.png"></a>
-        <a href="https://opensea.io/" target="_blank"><img src="assets/9255431_opensea_icon.png"></a>
-        <a href="https://pump.fun/board" target="_blank"><img src="assets/pumpfun.png"></a>
-        <a href="https://x.com/RoyalPawTOKEN" target="_blank"><img src="assets/twitter.png"></a>
-        <a href="https://t.me" target="_blank"><img src="assets/telegram.png"></a>
-        <a href="https://instagram.com" target="_blank"><img src="assets/instagram.png"></a>
-      </div>
-    </section>
-  </div>
+  <!-- SOCIALS -->
+  <section class="container" id="socials">
+    <h2>Socials & Listings</h2>
+    <div class="social-icons">
+      <a href="https://coinmarketcap.com/" target="_blank"><img src="assets/cmc.png" alt="CMC"></a>
+      <a href="https://coingecko.com/" target="_blank"><img src="assets/coingecko.png" alt="Gecko"></a>
+      <a href="https://dexscreener.com/" target="_blank"><img src="assets/dexscreener.png" alt="Dex"></a>
+      <a href="https://opensea.io/" target="_blank"><img src="assets/9255431_opensea_icon.png" alt="OpenSea"></a>
+      <a href="https://pump.fun/board" target="_blank"><img src="assets/pumpfun.png" alt="Pump"></a>
+      <a href="https://x.com/RoyalPawTOKEN" target="_blank"><img src="assets/twitter.png" alt="Twitter"></a>
+      <a href="https://t.me" target="_blank"><img src="assets/telegram.png" alt="Telegram"></a>
+      <a href="https://instagram.com" target="_blank"><img src="assets/instagram.png" alt="Insta"></a>
+    </div>
+  </section>
 
   <footer class="container">
-    <small><a href=\"#\">RoyalPAW © 2025</a> • <a href=\"#buy\">Back to Top</a></small>
+    <small><a href="#">RoyalPAW © 2025</a> • <a href="#buy">Back to Top</a></small>
   </footer>
+
 </body>
 </html>
