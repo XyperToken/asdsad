@@ -1,108 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>RoyalPAW - $RYPW Token</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
   <style>
     body {
       background: url("assets/bg.png") no-repeat center center fixed;
       background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
       color: #fff;
-      font-family: 'Comic Sans MS', 'Segoe UI', sans-serif;
-      scroll-behavior: smooth;
+      margin: 0;
     }
-    nav.container-fluid ul li a {
-      color: white;
-      font-weight: bold;
-    }
-    section.container {
-      background: rgba(0, 0, 0, 0.65);
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 850px;
-      transition: transform 0.6s ease;
-    }
-    section.left {
-      margin: 2rem auto 2rem 10%;
-    }
-    section.right {
-      margin: 2rem 10% 2rem auto;
-    }
-    h1, h2, h3, h4, p, li {
-      color: #fff;
-      font-size: 1.2rem;
-    }
-    .buy-btn {
-      display: inline-block;
-      background: linear-gradient(to right, #ffa500, #ff3c3c);
-      color: white;
-      font-weight: bold;
-      font-size: 1.5rem;
-      padding: 1rem 2rem;
-      border-radius: 10px;
+
+    main {
       text-align: center;
-      margin: 1rem auto 0.5rem;
+      margin-top: 2rem;
     }
-    .roadmap-image {
+
+    h1 {
+      font-size: 2.8rem;
+      font-family: 'Comic Sans MS', cursive;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+
+    .buy-btn {
+      background: linear-gradient(to right, #ffa500, #ff3c3c);
+      border: none;
+      padding: 1rem 2.5rem;
+      border-radius: 12px;
+      color: white;
+      font-size: 1.4rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .buy-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .contract {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    .contract span {
+      font-weight: bold;
+    }
+
+    .tokenomics {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      text-align: left;
+    }
+
+    .tokenomics h2 {
+      margin-top: 0;
+    }
+
+    .dex-frame {
       width: 100%;
-      max-width: 2048px;
-      height: auto;
+      max-width: 1100px;
+      height: 600px;
+      margin: 3rem auto;
       display: block;
-      margin: 0 auto;
-    }
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      margin-top: 1rem;
-    }
-    .social-icons img {
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-    }
-    .nft-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
-    .nft-grid img {
-      width: 100px;
+      border: 2px solid white;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
-    audio {
-      width: 100%;
-      margin-top: 1rem;
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .buy-btn {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+      }
+
+      .dex-frame {
+        height: 400px;
+      }
     }
   </style>
 </head>
 <body>
-  <nav class="container-fluid">
-    <ul></ul>
-    <ul>
-      <li><a href="#buy">Buy</a></li>
-      <li><a href="#tokenomics">Tokenomics</a></li>
-      <li><a href="#roadmap">RoyalMap</a></li>
-      <li><a href="#nfts">NFTs</a></li>
-      <li><a href="#socials">Socials</a></li>
-    </ul>
-  </nav>
 
-  <main class="container" id="buy">
-    <div style="text-align: center">
-      <a class="buy-btn" href="https://pump.fun/board" target="_blank">BUY $RYPW</a>
-      <p style="font-size: 1.4rem; font-weight: bold; margin-top: 0.5rem;">Contract address:</p>
-      <p>So11111111111111111111111111111111111111112</p>
+  <main>
+    <h1>RoyalPAW ($RYPW)</h1>
+    <p>$RYPW Utility Token powering paws, NFTs and community impact.</p>
+
+    <a href="https://pump.fun/board" target="_blank" class="buy-btn">BUY $RYPW</a>
+
+    <div class="contract">
+      <span>Contract address:</span> So11111111111111111111111111111111111111112
     </div>
   </main>
 
-  <section class="container left" id="tokenomics">
+  <section class="tokenomics">
     <h2>Tokenomics</h2>
     <ul>
       <li>50M $RYPW – Locked for long-term project stability</li>
@@ -111,51 +116,15 @@
       <li>30M $RYPW – Donations to dog shelters</li>
       <li>5M $RYPW – Permanently burned</li>
     </ul>
-    <iframe src="https://dexscreener.com/" title="DexScreener"></iframe>
   </section>
 
-  <section class="container right" id="roadmap">
-    <img class="roadmap-image" src="assets/roadmap.png" alt="Royal Paw Roadmap">
-  </section>
+  <!-- Dexscreener embedded view -->
+  <iframe class="dex-frame" src="https://dexscreener.com/solana" title="DexScreener Chart"></iframe>
 
-  <section class="container left" id="story">
-    <h2>Story of $RYPW</h2>
-    <audio controls>
-      <source src="assets/bailey-story.mp3" type="audio/mp3">
-      Your browser does not support the audio element.
-    </audio>
-  </section>
+  <!-- Optional direct buy iframe (Pump.fun may not allow embedding) -->
+  <!--
+  <iframe class="dex-frame" src="https://pump.fun/board" title="Buy from Pump.fun"></iframe>
+  -->
 
-  <section class="container right" id="nfts">
-    <h2>Bailey’s NFT Collection</h2>
-    <div class="nft-grid">
-      <img src="assets/nft1.png" alt="NFT1">
-      <img src="assets/nft2.png" alt="NFT2">
-      <img src="assets/nft3.png" alt="NFT3">
-      <img src="assets/nft4.png" alt="NFT4">
-      <img src="assets/nft5.png" alt="NFT5">
-    </div>
-    <div style="text-align:center; margin-top: 1rem">
-      <a class="buy-btn" href="https://opensea.io/" target="_blank">View Full Collection</a>
-    </div>
-  </section>
-
-  <section class="container left" id="socials">
-    <h2>Socials & Listings</h2>
-    <div class="social-icons">
-      <a href="https://coinmarketcap.com/" target="_blank"><img src="assets/cmc.png" alt="CMC"></a>
-      <a href="https://coingecko.com/" target="_blank"><img src="assets/coingecko.png" alt="Gecko"></a>
-      <a href="https://dexscreener.com/" target="_blank"><img src="assets/dexscreener.png" alt="Dex"></a>
-      <a href="https://opensea.io/" target="_blank"><img src="assets/9255431_opensea_icon.png" alt="OpenSea"></a>
-      <a href="https://pump.fun/board" target="_blank"><img src="assets/pumpfun.png" alt="Pump"></a>
-      <a href="https://x.com/RoyalPawTOKEN" target="_blank"><img src="assets/twitter.png" alt="Twitter"></a>
-      <a href="https://t.me" target="_blank"><img src="assets/telegram.png" alt="Telegram"></a>
-      <a href="https://instagram.com" target="_blank"><img src="assets/instagram.png" alt="Instagram"></a>
-    </div>
-  </section>
-
-  <footer class="container">
-    <small><a href="#">RoyalPAW © 2025</a> • <a href="#buy">Back to Top</a></small>
-  </footer>
 </body>
 </html>
