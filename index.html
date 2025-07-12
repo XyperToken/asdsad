@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head id="top">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>RoyalPAW - $RYPW Token</title>
@@ -44,6 +44,7 @@
       font-weight: bold;
       font-size: 1.1rem;
       text-align: center;
+      margin-top: 1rem;
     }
 
     .container img.roadmap-img {
@@ -163,19 +164,16 @@
   </footer>
 
   <script>
-    const sections = document.querySelectorAll(\"section\");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(\"visible\");
-        }
-      });
-    }, { threshold: 0.1 });
-
-    sections.forEach(section => {
+    document.querySelectorAll('section').forEach(section => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
       observer.observe(section);
     });
   </script>
 </body>
 </html>
-
