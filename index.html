@@ -14,29 +14,20 @@
       margin: 0;
       padding: 0;
     }
-    nav.container-fluid ul li a {
-      color: white;
+
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+    }
+
+    .hero p {
+      font-size: 2rem;
       font-weight: bold;
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
-    .container {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 2rem;
-      border-radius: 12px;
-      margin: 2rem auto;
-      max-width: 800px;
-      animation: fadeIn 0.7s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    h1, h2, h3 {
-      color: #ffffff;
-    }
-    p, li {
-      font-size: 1.2rem;
-      color: white;
-    }
+
     .buy-btn {
       display: inline-block;
       background: linear-gradient(to right, #ffa500, #ff3c3c);
@@ -46,121 +37,145 @@
       padding: 1rem 2rem;
       border-radius: 10px;
       text-align: center;
-      margin: 1rem auto;
+      margin-bottom: 1rem;
     }
-    .roadmap-image {
-      width: 90%;
+
+    .contract-address {
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .container img.roadmap-img {
+      width: 95%;
       max-width: 1600px;
-      height: auto;
       display: block;
       margin: 2rem auto;
       border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
+
+    .nft-section img.featured-nft {
+      width: 320px;
+      display: block;
+      margin: 2rem auto;
+    }
+
     .nft-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
     }
+
     .nft-grid img {
       width: 100px;
+      height: auto;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 8px rgba(255,255,255,0.3);
     }
-    .featured img {
-      width: 220px;
-      border-radius: 15px;
-      margin-bottom: 1rem;
-    }
+
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 1rem;
       flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
     }
+
     .social-icons img {
       width: 36px;
       height: 36px;
-      object-fit: contain;
+    }
+
+    section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-in-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero p {
+        font-size: 1.3rem;
+      }
+      .buy-btn {
+        font-size: 1.2rem;
+        padding: 0.9rem 1.4rem;
+      }
     }
   </style>
 </head>
 <body>
-
-  <nav class="container-fluid">
-    <ul></ul>
-    <ul>
-      <li><a href="#buy">Buy</a></li>
-      <li><a href="#tokenomics">Tokenomics</a></li>
-      <li><a href="#roadmap">RoyalMap</a></li>
-      <li><a href="#nfts">NFTs</a></li>
-      <li><a href="#socials">Socials</a></li>
-    </ul>
-  </nav>
-
-  <main class="container" id="buy" style="text-align: center; background: none; box-shadow: none;">
-    <p style="font-size: 1.7rem; font-weight: bold; text-shadow: 1px 1px 2px black;">
-      $RYPW Utility Token powering paws, NFTs and community impact.
-    </p>
+  <section class="hero">
+    <p>$RYPW Utility Token powering paws, NFTs and community impact.</p>
     <a class="buy-btn" href="https://pump.fun/board" target="_blank">BUY $RYPW</a>
-    <p><strong>Contract address:</strong> So11111111111111111111111111111111111111112</p>
+    <p class="contract-address">Contract address: So11111111111111111111111111111111111111112</p>
+  </section>
+
+  <main class="container">
+    <section id="roadmap">
+      <img class="roadmap-img" src="assets/roadmap.png" alt="Royal Paw Roadmap">
+    </section>
+
+    <section id="nfts" class="nft-section">
+      <h2 style="text-align:center">Bailey’s NFT Collection</h2>
+      <img class="featured-nft" src="assets/nft1.png" alt="Featured NFT">
+      <div class="nft-grid">
+        <img src="assets/nft2.png" alt="NFT2">
+        <img src="assets/nft3.png" alt="NFT3">
+        <img src="assets/nft4.png" alt="NFT4">
+        <img src="assets/nft5.png" alt="NFT5">
+        <img src="assets/nft6.png" alt="NFT6">
+        <img src="assets/nft7.png" alt="NFT7">
+      </div>
+      <div style="text-align:center; margin-top: 2rem">
+        <a class="buy-btn" href="https://opensea.io/" target="_blank">View Full Collection</a>
+      </div>
+    </section>
+
+    <section id="socials">
+      <h2 style="text-align:center">Socials & Listings</h2>
+      <div class="social-icons">
+        <a href="https://coinmarketcap.com/" target="_blank"><img src="assets/cmc.png" alt="CMC"></a>
+        <a href="https://coingecko.com/" target="_blank"><img src="assets/coingecko.png" alt="Gecko"></a>
+        <a href="https://dexscreener.com/" target="_blank"><img src="assets/dexscreener.png" alt="Dex"></a>
+        <a href="https://opensea.io/" target="_blank"><img src="assets/9255431_opensea_icon.png" alt="OpenSea"></a>
+        <a href="https://pump.fun/board" target="_blank"><img src="assets/pumpfun.png" alt="Pump"></a>
+        <a href="https://x.com/RoyalPawTOKEN" target="_blank"><img src="assets/twitter.png" alt="Twitter"></a>
+        <a href="https://t.me" target="_blank"><img src="assets/telegram.png" alt="Telegram"></a>
+        <a href="https://instagram.com" target="_blank"><img src="assets/instagram.png" alt="Insta"></a>
+      </div>
+    </section>
   </main>
 
-  <section class="container" id="tokenomics">
-    <h2>Tokenomics</h2>
-    <ul>
-      <li>50M $RYPW – Locked for long-term project stability</li>
-      <li>10M $RYPW – Airdropped to RoyalPAW NFT holders</li>
-      <li>5M $RYPW – Distributed to dog owners sharing selfies</li>
-      <li>30M $RYPW – Donations to dog shelters</li>
-      <li>5M $RYPW – Permanently burned</li>
-    </ul>
-    <iframe src="https://dexscreener.com" style="width:100%; height:500px; border:none; border-radius: 12px; margin-top: 2rem;"></iframe>
-  </section>
-
-  <section class="container" id="roadmap">
-    <img class="roadmap-image" src="assets/roadmap.png" alt="Royal Paw Roadmap">
-  </section>
-
-  <section class="container" id="nfts">
-    <h2>Bailey’s NFT Collection</h2>
-    <div class="featured">
-      <img src="assets/nft1.png" alt="Featured NFT">
-    </div>
-    <div class="nft-grid">
-      <img src="assets/nft2.png" alt="NFT2">
-      <img src="assets/nft3.png" alt="NFT3">
-      <img src="assets/nft4.png" alt="NFT4">
-      <img src="assets/nft5.png" alt="NFT5">
-      <img src="assets/nft6.png" alt="NFT6">
-      <img src="assets/nft7.png" alt="NFT7">
-    </div>
-    <div style="text-align:center; margin-top: 1rem">
-      <a class="buy-btn" href="https://opensea.io/" target="_blank">View Full Collection</a>
-    </div>
-  </section>
-
-  <section class="container" id="socials">
-    <h2>Socials & Listings</h2>
-    <div class="social-icons">
-      <a href="https://coinmarketcap.com/" target="_blank"><img src="assets/cmc.png" alt="CMC"></a>
-      <a href="https://coingecko.com/" target="_blank"><img src="assets/coingecko.png" alt="Gecko"></a>
-      <a href="https://dexscreener.com/" target="_blank"><img src="assets/dexscreener.png" alt="Dex"></a>
-      <a href="https://opensea.io/" target="_blank"><img src="assets/9255431_opensea_icon.png" alt="OpenSea"></a>
-      <a href="https://pump.fun/board" target="_blank"><img src="assets/pumpfun.png" alt="Pump"></a>
-      <a href="https://x.com/RoyalPawTOKEN" target="_blank"><img src="assets/twitter.png" alt="Twitter"></a>
-      <a href="https://t.me" target="_blank"><img src="assets/telegram.png" alt="Telegram"></a>
-      <a href="https://instagram.com" target="_blank"><img src="assets/instagram.png" alt="Instagram"></a>
-    </div>
-  </section>
-
-  <footer class="container">
-    <small><a href="#">RoyalPAW © 2025</a> • <a href="#buy">Back to Top</a></small>
+  <footer>
+    <small><a href="#">RoyalPAW © 2025</a> • <a href="#top">Back to Top</a></small>
   </footer>
 
+  <script>
+    const sections = document.querySelectorAll(\"section\");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(\"visible\");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
 
-
-</body>
-</html>
