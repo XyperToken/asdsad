@@ -9,8 +9,11 @@
     body {
       background: url("assets/bg.png") no-repeat center center fixed;
       background-size: cover;
+      background-position: center;
       font-family: 'Segoe UI', sans-serif;
       color: white;
+      margin: 0;
+      padding: 0;
     }
     nav ul li a {
       color: white !important;
@@ -29,7 +32,8 @@
     }
     .hero {
       text-align: center;
-      padding-top: 6rem;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
       background: transparent !important;
     }
     #roadmap {
@@ -100,6 +104,52 @@
       justify-content: center;
       gap: 1rem;
     }
+
+    @media (max-width: 768px) {
+      body {
+        background-position: top center;
+        background-size: contain;
+      }
+
+      .hero {
+        padding-top: 10rem;
+        padding-bottom: 3rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+      }
+
+      .buy-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav ul li {
+        margin: 0.5rem;
+      }
+
+      .roadmap-image {
+        max-width: 100%;
+        border-radius: 8px;
+      }
+
+      .social-icons img {
+        width: 32px;
+        height: 32px;
+      }
+
+      .nft-grid img, .media-grid img {
+        width: 80px;
+      }
+    }
+
     @keyframes fadeInUp {
       from {
         opacity: 0;
