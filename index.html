@@ -9,60 +9,64 @@
     body {
       background: url("assets/bg.png") no-repeat center center fixed;
       background-size: cover;
+      color: white;
       font-family: 'Segoe UI', sans-serif;
+    }
+
+    h1, h2, h3, h4, p, li, strong {
       color: white;
     }
 
-    h1, h2, h3, h4 {
-      color: white;
-    }
-
-    nav ul li a {
+    nav.container-fluid ul li a {
       color: white;
       font-weight: bold;
     }
 
-    .container {
-      background: rgba(0, 0, 0, 0.65);
+    .container, .container section {
+      background: rgba(0, 0, 0, 0.6);
       padding: 2rem;
+      border-radius: 12px;
       margin: 2rem auto;
-      border-radius: 16px;
       max-width: 900px;
     }
 
-    .buy-section {
-      text-align: center;
-      padding: 4rem 1rem 2rem;
+    .nobg {
+      background: none !important;
+      box-shadow: none !important;
     }
 
     .buy-btn {
       display: inline-block;
       background: linear-gradient(to right, #ffa500, #ff3c3c);
+      color: white;
+      font-weight: bold;
+      font-size: 1.4rem;
       padding: 1rem 2rem;
       border-radius: 10px;
-      font-weight: bold;
-      font-size: 1.3rem;
-      margin-top: 2rem;
-      color: white;
-      text-decoration: none;
+      text-align: center;
+      margin: 1rem auto;
     }
 
-    .contract-address {
-      margin-top: 1rem;
-      font-size: 1.1rem;
-      word-break: break-word;
-    }
-
-    iframe {
+    .roadmap-image {
       width: 100%;
-      height: 600px;
-      border: none;
+      max-width: 1200px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
       margin-top: 1rem;
     }
 
-    audio {
-      width: 100%;
-      margin-top: 1rem;
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
     }
 
     .nft-grid {
@@ -73,68 +77,57 @@
     }
 
     .nft-grid img {
-      width: 110px;
+      width: 100px;
       border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .nft-grid img:hover {
-      transform: scale(1.05);
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .social-icons img {
-      width: 40px;
-      height: 40px;
-    }
-
-    .media-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 1rem;
-    }
-
-    .media-gallery img {
-      width: 100%;
-      border-radius: 8px;
-      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
       transition: transform 0.3s;
     }
 
-    .media-gallery img:hover {
-      transform: scale(1.05);
+    .nft-grid img:hover {
+      transform: scale(1.1);
     }
 
-    .roadmap-img {
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 1rem;
+      justify-items: center;
+    }
+
+    .media-grid img {
       width: 100%;
-      max-width: 1200px;
-      display: block;
-      margin: 0 auto;
-      border-radius: 12px;
+      max-width: 150px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
     }
 
-    @media only screen and (max-width: 768px) {
-      body {
-        background-size: cover;
-      }
+    .media-grid img:hover {
+      transform: scale(1.1);
+    }
 
+    audio {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
       .container {
-        margin: 1rem;
         padding: 1rem;
       }
-
-      .roadmap-img {
-        width: 100%;
-      }
-
       .buy-btn {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+      }
+      .social-icons img {
+        width: 36px;
+        height: 36px;
       }
     }
   </style>
@@ -148,50 +141,39 @@
       <li><a href="#tokenomics">Tokenomics</a></li>
       <li><a href="#roadmap">Roadmap</a></li>
       <li><a href="#nfts">NFTs</a></li>
-      <li><a href="#about">About</a></li>
       <li><a href="#socials">Socials</a></li>
+      <li><a href="#memes">Memes</a></li>
     </ul>
   </nav>
 
-  <section id="buy" class="buy-section">
-    <h2 style="font-size: 2rem;">$RYPW Utility Token powering paws, NFTs and community impact.</h2>
-    <a class="buy-btn" href="https://pump.fun/board" target="_blank">BUY $RYPW</a>
-    <p class="contract-address"><strong>Contract Address:</strong> So11111111111111111111111111111111111111112</p>
-  </section>
-
-  <section class="container" id="how">
-    <h2>How to Buy</h2>
-    <ol>
-      <li>Install <strong>Phantom Wallet</strong> and create your wallet.</li>
-      <li>Deposit SOL to your wallet from a CEX.</li>
-      <li>Go to <a href="https://pump.fun" target="_blank">pump.fun</a></li>
-      <li>Paste contract address and buy $RYPW.</li>
-      <li>HODL and enjoy the community ride!</li>
-    </ol>
-  </section>
+  <main class="container nobg" id="buy">
+    <div style="text-align: center">
+      <a class="buy-btn" href="https://pump.fun/board" target="_blank">BUY $RYPW</a>
+      <p style="margin-top: 1rem;"><strong>Contract address:</strong><br>So11111111111111111111111111111111111111112</p>
+    </div>
+  </main>
 
   <section class="container" id="tokenomics">
     <h2>Tokenomics</h2>
-    <p><img src="assets/token-icon.png" style="width:30px; vertical-align:middle;"> 1,000,000,000 Total Supply</p>
+    <p><img src="assets/token-icon.png" alt="Token Icon" style="width: 30px; vertical-align: middle;"> 1,000,000,000 Total Supply</p>
     <ul>
-      <li>50M $RYPW — Locked for long-term project stability</li>
-      <li>10M $RYPW — Airdropped to RoyalPAW NFT holders</li>
-      <li>5M $RYPW — Dog owners posting selfies</li>
-      <li>30M $RYPW — Donations to dog shelters</li>
-      <li>5M $RYPW — Permanently burned</li>
+      <li>50M $RYPW – Locked for long-term project stability</li>
+      <li>10M $RYPW – Airdropped to RoyalPAW NFT holders</li>
+      <li>5M $RYPW – Distributed to dog owners sharing selfies</li>
+      <li>30M $RYPW – Donations to dog shelters</li>
+      <li>5M $RYPW – Permanently burned</li>
     </ul>
-    <iframe src="https://dexscreener.com" title="Dexscreener"></iframe>
+    <iframe src="https://dexscreener.com/" title="DexScreener"></iframe>
   </section>
 
   <section class="container" id="roadmap">
-    <h2>Roadmap</h2>
-    <img class="roadmap-img" src="assets/roadmap.png" alt="Roadmap">
+    <img class="roadmap-image" src="assets/roadmap.png" alt="Royal Paw Roadmap">
   </section>
 
   <section class="container" id="story">
     <h2>Story of Bailey</h2>
-    <audio autoplay controls>
-      <source src="assets/bailey-story.mp3" type="audio/mp3">
+    <audio controls autoplay>
+      <source src="assets/bailey-story.mp3" type="audio/mp3" />
       Your browser does not support the audio element.
     </audio>
   </section>
@@ -199,59 +181,54 @@
   <section class="container" id="nfts">
     <h2>Bailey’s NFT Collection</h2>
     <p>
-      Bailey has prepared a collection of 150 unique NFTs.<br>
-      - 50 Premium NFTs: 100,000 $RYPW each<br>
-      - 100 Standard NFTs: 50,000 $RYPW each<br>
-      Unique items, rare traits, community perks.
+      Bailey has prepared a collection of 150 unique NFTs with special token bonuses.<br>
+      - 50 Premium NFTs – 100,000 $RYPW each<br>
+      - 100 Standard NFTs – 50,000 $RYPW each<br>
+      Rare, limited, and never minted again.
     </p>
-    <div class="nft-grid">
-      <img src="assets/nft1.png" alt="">
-      <img src="assets/nft2.png" alt="">
-      <img src="assets/nft3.png" alt="">
-      <img src="assets/nft4.png" alt="">
-      <img src="assets/nft5.png" alt="">
-      <img src="assets/nft6.png" alt="">
+    <div style="text-align: center; margin: 1rem 0;">
+      <img src="assets/nft1.png" alt="Featured NFT" style="max-width: 300px;" />
     </div>
-  </section>
-
-  <section class="container" id="about">
-    <h2>About RoyalPAW</h2>
-    <p>
-      RoyalPAW is more than just a meme coin. Inspired by Bailey the Cavalier King, this project supports real-world causes like dog shelters while offering fun and value through NFTs, community, and token utility.
-    </p>
-  </section>
-
-  <section class="container" id="media">
-    <h2>Bailey Meme Gallery</h2>
-    <div class="media-gallery">
-      <img src="assets/memes/1.png" alt="meme1">
-      <img src="assets/memes/2.png" alt="meme2">
-      <img src="assets/memes/3.png" alt="meme3">
-      <img src="assets/memes/4.png" alt="meme4">
-      <img src="assets/memes/5.png" alt="meme5">
-      <img src="assets/memes/6.png" alt="meme6">
-      <img src="assets/memes/7.png" alt="meme7">
-      <img src="assets/memes/8.png" alt="meme8">
-      <img src="assets/memes/9.png" alt="meme9">
-      <img src="assets/memes/10.png" alt="meme10">
+    <div class="nft-grid">
+      <img src="assets/nft2.png" alt="NFT 2" />
+      <img src="assets/nft3.png" alt="NFT 3" />
+      <img src="assets/nft4.png" alt="NFT 4" />
+      <img src="assets/nft5.png" alt="NFT 5" />
+      <img src="assets/nft6.png" alt="NFT 6" />
+      <img src="assets/nft7.png" alt="NFT 7" />
     </div>
   </section>
 
   <section class="container" id="socials">
     <h2>Socials & Listings</h2>
     <div class="social-icons">
-      <a href="#"><img src="assets/cmc.png" alt=""></a>
-      <a href="#"><img src="assets/coingecko.png" alt=""></a>
-      <a href="#"><img src="assets/opensea.png" alt=""></a>
-      <a href="#"><img src="assets/pumpfun.png" alt=""></a>
-      <a href="#"><img src="assets/twitter.png" alt=""></a>
-      <a href="#"><img src="assets/telegram.png" alt=""></a>
-      <a href="#"><img src="assets/instagram.png" alt=""></a>
+      <a href="#"><img src="assets/twitter.png" alt="Twitter" /></a>
+      <a href="#"><img src="assets/telegram.png" alt="Telegram" /></a>
+      <a href="#"><img src="assets/instagram.png" alt="Instagram" /></a>
+      <a href="#"><img src="assets/opensea.png" alt="OpenSea" /></a>
+      <a href="#"><img src="assets/dexscreener.png" alt="Dexscreener" /></a>
+      <a href="#"><img src="assets/coinmarketcap.png" alt="CMC" /></a>
+    </div>
+  </section>
+
+  <section class="container" id="memes">
+    <h2>Bailey’s Meme Gallery</h2>
+    <div class="media-grid">
+      <img src="assets/1.png" alt="Meme 1" />
+      <img src="assets/2.png" alt="Meme 2" />
+      <img src="assets/3.png" alt="Meme 3" />
+      <img src="assets/4.png" alt="Meme 4" />
+      <img src="assets/5.png" alt="Meme 5" />
+      <img src="assets/6.png" alt="Meme 6" />
+      <img src="assets/7.png" alt="Meme 7" />
+      <img src="assets/8.png" alt="Meme 8" />
+      <img src="assets/9.png" alt="Meme 9" />
+      <img src="assets/10.png" alt="Meme 10" />
     </div>
   </section>
 
   <footer class="container">
-    <small>© 2025 RoyalPAW • All rights reserved</small>
+    <small><a href="#">RoyalPAW © 2025</a> • <a href="#buy">Back to Top</a></small>
   </footer>
 
 </body>
