@@ -2,161 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RoyalPAW Token</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RoyalPAW - $RYPW</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
   <style>
     body {
       background: url("assets/bg.png") no-repeat center center fixed;
       background-size: cover;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white !important;
+      font-weight: bold;
+    }
+    h1, h2, h3, p, li {
       color: white;
     }
+    main, section {
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: 2rem auto;
+      background: rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 1.5s ease;
+    }
+
     .hero {
       text-align: center;
-      padding: 8rem 2rem 5rem;
-      background-color: rgba(0, 0, 0, 0.4);
-      margin-bottom: 2rem;
+      padding-top: 10rem; /* 🟡 увеличено от 6rem на 10rem */
     }
-    .btn-buy {
-      background: linear-gradient(to right, orange, red);
-      color: white;
+
+    .hero p {
+      font-size: 1.4rem;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      background: linear-gradient(to right, #ffa500, #ff3c3c);
       padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 10px;
       margin-top: 2rem;
-    }
-    .section {
-      background-color: rgba(0, 0, 0, 0.5);
-      margin: 2rem auto;
-      padding: 2rem;
-      border-radius: 15px;
-      max-width: 900px;
-    }
-    .nfts img, .memes img {
-      width: 120px;
-      height: auto;
-      margin: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
       border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
+      color: white;
+      text-decoration: none;
     }
-    .nfts img:hover, .memes img:hover {
+
+    .nft-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .nft-grid img, .media-grid img {
+      width: 100px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .nft-grid img:hover, .media-grid img:hover {
       transform: scale(1.2);
     }
-    .socials img {
-      width: 40px;
-      margin: 0 10px;
+
+    .roadmap-image {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 12px;
     }
+
     audio {
       width: 100%;
       margin-top: 1rem;
     }
-    @media (max-width: 768px) {
-      .hero {
-        padding: 5rem 1rem 3rem;
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .social-icons img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+
+    .media-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
       }
-      .nfts img, .memes img {
-        width: 80px;
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-size: contain; /* ✅ показа целия фон на мобилни */
+        background-position: top center;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <header class="hero">
-    <h2>$RYPW Utility Token powering paws, NFTs and community impact.</h2>
-    <button class="btn-buy">BUY $RYPW</button>
-    <p><strong>Contract address:</strong> So1111111111111111111111111111111111111111112</p>
-  </header>
-
-  <section class="section">
-    <h2>Tokenomics</h2>
-    <p><img src="assets/token-icon.png" alt="token" style="width: 24px; vertical-align: middle;" /> Total Supply: 1,000,000,000 $RYPW</p>
-    <ul>
-      <li>50M $RYPW – Locked for long-term project stability</li>
-      <li>10M $RYPW – Airdropped to RoyalPAW NFT holders</li>
-      <li>5M $RYPW – Distributed to dog owners sharing selfies</li>
-      <li>30M $RYPW – Donations to dog shelters</li>
-      <li>5M $RYPW – Permanently burned</li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <h2>RoyalMap</h2>
-    <img src="assets/roadmap.png" alt="Roadmap" style="width:100%; max-width:800px; border-radius: 10px;" />
-  </section>
-
-  <section class="section">
-    <h2>Bailey's NFT Collection</h2>
-    <div class="nfts">
-      <img src="assets/nft1.png" alt="NFT 1" />
-      <img src="assets/nft2.png" alt="NFT 2" />
-      <img src="assets/nft3.png" alt="NFT 3" />
-      <img src="assets/nft4.png" alt="NFT 4" />
-      <img src="assets/nft5.png" alt="NFT 5" />
-      <img src="assets/nft6.png" alt="NFT 6" />
-      <img src="assets/nft7.png" alt="NFT 7" />
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>About RoyalPAW</h2>
-    <p>RoyalPAW is a community-driven token designed to bring joy, utility, and real-world impact through NFTs, donations, and fun. Join Bailey on the journey to revolutionize the meme space with paws and purpose!</p>
-  </section>
-
-  <section class="section">
-    <h2>How to Buy</h2>
-    <ol>
-      <li>Create a Solana wallet (e.g., Phantom)</li>
-      <li>Load your wallet with SOL</li>
-      <li>Go to PumpFun and search $RYPW</li>
-      <li>Connect wallet and swap SOL for $RYPW</li>
-    </ol>
-    <p><img src="assets/pumpfun.png" alt="PumpFun" style="width:150px;" /></p>
-  </section>
-
-  <section class="section">
-    <h2>Bailey's Story</h2>
-    <audio controls autoplay>
-      <source src="assets/bailey-story.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
-  </section>
-
-  <section class="section">
-    <h2>Media</h2>
-    <div class="memes">
-      <img src="assets/1.png" alt="meme1" />
-      <img src="assets/2.png" alt="meme2" />
-      <img src="assets/3.png" alt="meme3" />
-      <img src="assets/4.png" alt="meme4" />
-      <img src="assets/5.png" alt="meme5" />
-      <img src="assets/6.png" alt="meme6" />
-      <img src="assets/7.png" alt="meme7" />
-      <img src="assets/8.png" alt="meme8" />
-      <img src="assets/9.png" alt="meme9" />
-      <img src="assets/10.png" alt="meme10" />
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Socials & Listings</h2>
-    <div class="socials">
-      <a href="#"><img src="assets/9255431_opensea_icon.png" alt="OpenSea" /></a>
-      <a href="#"><img src="assets/cmc.png" alt="CoinMarketCap" /></a>
-      <a href="#"><img src="assets/coingecko.png" alt="CoinGecko" /></a>
-      <a href="#"><img src="assets/twitter.png" alt="Twitter" /></a>
-      <a href="#"><img src="assets/telegram.png" alt="Telegram" /></a>
-      <a href="#"><img src="assets/instagram.png" alt="Instagram" /></a>
-    </div>
-  </section>
-
-  <footer class="section" style="text-align:center; font-size: 0.9rem;">
-    RoyalPAW © 2025 • <a href="#">Back to Top</a>
-  </footer>
+  <!-- тук продължаваш с твоя <nav>, <section class="hero"> и т.н. -->
 
 </body>
 </html>
-
