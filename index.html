@@ -11,8 +11,6 @@
       background-size: cover;
       font-family: 'Segoe UI', sans-serif;
       color: white;
-      margin: 0;
-      padding: 0;
     }
     nav ul li a {
       color: white !important;
@@ -31,7 +29,11 @@
     }
     .hero {
       text-align: center;
-      padding-top: 10rem; /* Свален надолу */
+      padding-top: 6rem;
+      background: transparent !important;
+    }
+    #roadmap {
+      background: transparent !important;
     }
     .hero p {
       font-size: 1.4rem;
@@ -49,7 +51,7 @@
       color: white;
       text-decoration: none;
     }
-    .nft-grid, .media-grid {
+    .nft-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
@@ -92,6 +94,12 @@
       height: 36px;
       object-fit: contain;
     }
+    .media-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -102,21 +110,10 @@
         transform: translateY(0);
       }
     }
-    @media (max-width: 768px) {
-      body {
-        background-size: contain;
-        background-position: top center;
-      }
-      .hero {
-        padding-top: 8rem;
-      }
-    }
   </style>
 </head>
 <body>
-.hero {
-  background: transparent !important;
-}
+
   <nav class="container-fluid">
     <ul><li><strong>RoyalPAW</strong></li></ul>
     <ul>
@@ -138,7 +135,7 @@
 
   <section id="about">
     <h2>About RoyalPAW</h2>
-    <p>RoyalPAW is a meme token on Solana inspired by Bailey – the royal Cavalier King with a crypto dream. Built with purpose, paws, and community spirit, $RYPW is dedicated to supporting real-world dog shelters while creating digital royalty through NFTs and memes.</p>
+    <p>RoyalPAW is a meme token on Solana inspired by Bailey – the royal Cavalier King with a crypto dream. Built with purpose, paws, and community spirit, $RYPW is dedicated to supporting real-world dog shelters while creating digital royalty through NFTs and memes. The community is growing fast – join the movement and bark your way into the future!</p>
   </section>
 
   <section id="how">
@@ -230,5 +227,3 @@
 
 </body>
 </html>
-</html>
-
